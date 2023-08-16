@@ -9,7 +9,7 @@ namespace API.Middleware
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionMiddleware> _logger;
         private readonly IHostEnvironment _env;
-        private const string apiKeyName = "ApiKey";
+        private const string apiKeyName = AuthConstants.ApiKeyValueName;
         public ApiKeyAuthMiddleware(RequestDelegate next, ILogger<ExceptionMiddleware> logger,
             IHostEnvironment env)
         {
@@ -22,7 +22,6 @@ namespace API.Middleware
         {
             try
             {
-                // await _next(context);
                 _logger.LogError("MIddleware 2 work");
                 if (!context.Request.Headers.TryGetValue(apiKeyName, out var extractedApiKey))
                 {
@@ -32,6 +31,7 @@ namespace API.Middleware
                 }
                 var appSettings = context.RequestServices.GetRequiredService<IConfiguration>();
                 var key = appSettings.GetValue<string>(apiKeyName);
+
                 if (!key.Equals(extractedApiKey))
                 {
                     context.Response.StatusCode = 401;

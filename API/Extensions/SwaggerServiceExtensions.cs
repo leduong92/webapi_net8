@@ -13,9 +13,8 @@ namespace API.Extensions
                 var securitySchema = new OpenApiSecurityScheme
                 {
                     Description = "JWT Auth Bearer Scheme",
-                    Name = "Authorisation",
                     In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.Http,
+                    Type = SecuritySchemeType.ApiKey,
                     Scheme = "Bearer",
                     Reference = new OpenApiReference
                     {
