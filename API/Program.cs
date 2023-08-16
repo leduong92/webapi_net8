@@ -18,6 +18,7 @@ builder.Services.AddSwaggerDocumentation();
 var app = builder.Build();
 
 app.UseMiddleware<ExceptionMiddleware>();
+// app.UseMiddleware<ApiKeyAuthMiddleware>();
 app.UseStatusCodePagesWithReExecute("/errors/{0}");
 app.UseSwaggerDocumentation();
 app.UseStaticFiles();
