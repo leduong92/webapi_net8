@@ -1,5 +1,6 @@
 using Core.DTO.RequestDto;
 using Core.Interfaces;
+using Core.Model;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -16,7 +17,7 @@ public class CollectionController : BaseApiController
     }
 
     [HttpGet]
-    public async Task<List<CollectionResponseDto>> Get([FromQuery] PagingWithTimeRequestDTO request)
+    public async Task<PagedResult<CollectionResponseDto>> Get([FromQuery] PagingWithTimeRequestDTO request)
     {
         var results = await _collectionService.ListCollections(request);
 
