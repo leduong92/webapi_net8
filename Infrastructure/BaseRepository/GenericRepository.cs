@@ -52,12 +52,12 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         IQueryable<T> query = GetByConditionQueryable(filter, orderBy, includeProperties);
         var result = new PagedResult<T>();
-        result.CurrentPage = page;
+        result.PageIndex = page;
         result.PageSize = pageSize;
-        result.RowCount = query.Count();
+        result.TotalCount = query.Count();
 
-        var pageCount = (double)result.RowCount / pageSize;
-        result.PageCount = (int)Math.Ceiling(pageCount);
+        var pageCount = (double)result.TotalCount / pageSize;
+        result.NumberOfPage = (int)Math.Ceiling(pageCount);
 
         var skip = (page - 1) * pageSize;
         result.Results = await query.Skip(skip).Take(pageSize).ToListAsync();
@@ -116,5 +116,10 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
             context.Entry(entity).State = EntityState.Modified;
         }
         context.SaveChanges();
+    }
+
+    public async Task<IEnumerable<T>> GetWithRawSql(string query, params object[] parameters)
+    {
+        return await dbSet.FromSqlRaw(query, parameters).ToListAsync();
     }
 }

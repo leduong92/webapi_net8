@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class Style
+public partial class Style : BaseEntity
 {
-    public int Id { get; set; }
-
     public string StyleName { get; set; }
 
     public string UrlCode { get; set; }
@@ -34,14 +32,5 @@ public partial class Style
     public bool? IsDescription { get; set; }
 
     public bool? IsImage { get; set; }
-
-    public string CreatedBy { get; set; }
-
-    public DateTime? CreatedOn { get; set; }
-
-    public string UpdatedBy { get; set; }
-
-    public DateTime? UpdatedOn { get; set; }
-
     public virtual ICollection<Item> Items { get; set; } = new List<Item>();
 }

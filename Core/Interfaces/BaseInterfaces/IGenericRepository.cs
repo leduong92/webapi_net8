@@ -10,8 +10,10 @@ namespace Core.Interfaces
         Task<IEnumerable<T>> GetEntityWithSpec(Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = "");
-        Task<PagedResult<T>> GetWithPaging(int page,
-            int pageSize, Expression<Func<T, bool>> filter = null,
+
+        Task<IEnumerable<T>> GetWithRawSql(string query, params object[] parameters);
+        Task<PagedResult<T>> GetWithPaging(int pageIndex = 1,
+            int pageSize = 10, Expression<Func<T, bool>> filter = null,
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = "");
         void Insert(T entity);

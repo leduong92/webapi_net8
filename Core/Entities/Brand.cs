@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class Brand
+public partial class Brand : BaseEntity
 {
-    public int Id { get; set; }
-
     public string BrandName { get; set; }
 
     public string UrlCode { get; set; }
@@ -32,14 +30,6 @@ public partial class Brand
     public bool? IsDescription { get; set; }
 
     public bool? IsImage { get; set; }
-
-    public string CreatedBy { get; set; }
-
-    public DateTime? CreatedOn { get; set; }
-
-    public string UpdatedBy { get; set; }
-
-    public DateTime? UpdatedOn { get; set; }
 
     public virtual ICollection<Collection> Collections { get; set; } = new List<Collection>();
 }

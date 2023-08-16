@@ -35,14 +35,6 @@ public partial class Collection : BaseEntity
 
     public bool? IsImage { get; set; }
 
-    public string CreatedBy { get; set; }
-
-    public DateTime? CreatedOn { get; set; }
-
-    public string UpdatedBy { get; set; }
-
-    public DateTime? UpdatedOn { get; set; }
-
     public virtual Brand Brand { get; set; }
 
     public virtual ICollection<Item> Items { get; set; } = new List<Item>();

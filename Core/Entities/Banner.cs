@@ -3,10 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class Banner
+public partial class Banner : BaseEntity
 {
-    public int Id { get; set; }
-
     public string BannerName { get; set; }
 
     public int SortOrder { get; set; }

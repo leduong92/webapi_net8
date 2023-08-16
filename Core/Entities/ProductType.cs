@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class ProductType
+public partial class ProductType : BaseEntity
 {
-    public int Id { get; set; }
 
     public int RoomId { get; set; }
 
@@ -36,15 +35,6 @@ public partial class ProductType
     public bool? IsDescription { get; set; }
 
     public bool? IsImage { get; set; }
-
-    public string CreatedBy { get; set; }
-
-    public DateTime? CreatedOn { get; set; }
-
-    public string UpdatedBy { get; set; }
-
-    public DateTime? UpdatedOn { get; set; }
-
     public virtual ICollection<Item> Items { get; set; } = new List<Item>();
 
     public virtual Room Room { get; set; }

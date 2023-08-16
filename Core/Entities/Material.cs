@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class Material
+public partial class Material : BaseEntity
 {
-    public int Id { get; set; }
 
     public string MaterialName { get; set; }
 

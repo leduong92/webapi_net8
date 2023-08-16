@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class Item
+public partial class Item : BaseEntity
 {
-    public long Id { get; set; }
 
     public string Sku { get; set; }
 
@@ -104,15 +103,6 @@ public partial class Item
     public string MetaDescription { get; set; }
 
     public bool? IsActive { get; set; }
-
-    public string CreatedBy { get; set; }
-
-    public DateTime? CreatedOn { get; set; }
-
-    public string UpdatedBy { get; set; }
-
-    public DateTime? UpdatedOn { get; set; }
-
     public string ImageMainUrl { get; set; }
 
     public virtual Collection Collection { get; set; }

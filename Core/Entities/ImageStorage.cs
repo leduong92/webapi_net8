@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Core.Entities;
 
-public partial class ImageStorage
+public partial class ImageStorage : BaseEntity
 {
-    public long Id { get; set; }
 
     public long ItemId { get; set; }
 
