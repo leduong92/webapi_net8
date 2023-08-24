@@ -1,6 +1,7 @@
 using API.Extensions;
 using API.Middleware;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,11 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddSwaggerDocumentation();
 
 var app = builder.Build();
+
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 
 app.Urls.Add("http://172.18.96.1:5046");
 app.Urls.Add("http://localhost:5046");
