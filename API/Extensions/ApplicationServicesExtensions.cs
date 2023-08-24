@@ -16,7 +16,7 @@ namespace API.Extensions
         {
             var conn = config.GetConnectionString("DefaultConnection");
 
-            Console.WriteLine(conn);
+            Console.WriteLine("Connasdasfkajfhaksjd====================" + conn);
 
             services.AddDbContext<TestdbContext>(opt =>
             {
