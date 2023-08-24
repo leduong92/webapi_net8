@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<TestdbContext>(option =>
-        option.UseNpgsql("host=localhost; port=5432; user id=tauser; password=tauser; database=testdb;")
+        option.UseNpgsql(conn)
 );
 
 builder.Services.AddControllers();
