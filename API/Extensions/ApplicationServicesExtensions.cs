@@ -16,11 +16,9 @@ namespace API.Extensions
         {
             var conn = config.GetConnectionString("DefaultConnection");
 
-            Console.WriteLine("Connasdasfkajfhaksjd====================" + conn);
-
             services.AddDbContext<TestdbContext>(opt =>
             {
-                opt.UseNpgsql(config.GetConnectionString(conn));
+                opt.UseNpgsql(config.GetConnectionString("host=localhost; port=5432; user id=tauser; password=tauser; database=testdb;"));
             });
 
 
