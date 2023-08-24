@@ -16,6 +16,9 @@ builder.Services.AddSwaggerDocumentation();
 
 var app = builder.Build();
 
+app.Urls.Add("http://172.18.96.1:5046");
+app.Urls.Add("http://localhost:5046");
+
 app.UseMiddleware<ExceptionMiddleware>();
 // app.UseMiddleware<ApiKeyAuthMiddleware>();
 app.UseStatusCodePagesWithReExecute("/errors/{0}");
