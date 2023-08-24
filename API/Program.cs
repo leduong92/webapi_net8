@@ -8,6 +8,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<TestdbContext>(option =>
+        option.UseNpgsql(conn)
+);
+
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddHttpContextAccessor();

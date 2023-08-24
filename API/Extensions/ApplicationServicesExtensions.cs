@@ -14,13 +14,12 @@ namespace API.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services,
             IConfiguration config)
         {
-            var conn = config.GetConnectionString("DefaultConnection");
+            // var conn = config.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<TestdbContext>(opt =>
-            {
-                opt.UseNpgsql(config.GetConnectionString("host=localhost; port=5432; user id=tauser; password=tauser; database=testdb;"));
-            });
-
+            // services.AddDbContext<TestdbContext>(opt =>
+            // {
+            //     opt.UseNpgsql(config.GetConnectionString("host=localhost; port=5432; user id=tauser; password=tauser; database=testdb;"));
+            // });
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
