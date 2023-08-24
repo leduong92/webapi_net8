@@ -14,9 +14,13 @@ namespace API.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services,
             IConfiguration config)
         {
+            var conn = config.GetConnectionString("DefaultConnection");
+
+            Console.WriteLine(conn);
+
             services.AddDbContext<TestdbContext>(opt =>
             {
-                opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+                opt.UseNpgsql(config.GetConnectionString(conn));
             });
 
 
