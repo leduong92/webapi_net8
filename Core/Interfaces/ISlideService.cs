@@ -4,7 +4,7 @@ using Core.Model;
 
 namespace Core.Interfaces
 {
-    public interface ICollectionService
+    public interface ISlideService
     {
         // Task<PagedResult<CollectionResponseDto>> ListCollections(PagingWithTimeRequestDTO dto);
     }

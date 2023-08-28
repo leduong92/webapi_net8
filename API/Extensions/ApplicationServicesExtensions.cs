@@ -14,21 +14,24 @@ namespace API.Extensions
         public static IServiceCollection AddApplicationServices(this IServiceCollection services,
             IConfiguration config)
         {
-            // var conn = config.GetConnectionString("DefaultConnection");
-
-            // services.AddDbContext<TestdbContext>(opt =>
-            // {
-            //     opt.UseNpgsql(config.GetConnectionString("host=localhost; port=5432; user id=tauser; password=tauser; database=testdb;"));
-            // });
+            services.AddDbContext<TestdbContext>(opt =>
+            {
+                opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+            });
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            services.AddScoped<ICollectionService, CollectionService>();
-            services.AddScoped<IUserService, UserService>();
+            services.AddTransient<ICollectionService, CollectionService>();
+            services.AddTransient<IUserService, UserService>();
 
+            services.AddTransient<IStorageService, FileStorageService>();
+
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<ISlideService, SlideService>();
 
             services.Configure<ApiBehaviorOptions>(options =>
             {

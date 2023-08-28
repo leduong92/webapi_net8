@@ -81,7 +81,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
         foreach (var includeProperty in includeProperties.Split
             (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
         {
-            query = query.Include(includeProperty);
+            query = query.Include(includeProperty.Trim());
         }
 
         if (orderBy != null)

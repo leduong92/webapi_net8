@@ -30,5 +30,30 @@ namespace Infrastructure.HelperService
             };
             return JsonConvert.SerializeObject(dynamicResult, Formatting.None, jsonSetting);
         }
+        public static T MapObjectToString<T>(this object value) //T is output type
+        {
+            if (value == null) return default(T);
+
+            IDictionary<string, object> expando = new ExpandoObject();
+
+            foreach (PropertyDescriptor property in TypeDescriptor.GetProperties(value.GetType()))
+            {
+                string newColumName = "";
+
+                newColumName = property.Name;
+
+                if (!string.IsNullOrEmpty(newColumName))
+                    expando.Add(newColumName, property.GetValue(value));
+            }
+            var dynamicResult = expando as ExpandoObject;
+            var jsonSetting = new JsonSerializerSettings()
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+            };
+            T result = JsonConvert.DeserializeObject<T>(
+                JsonConvert.SerializeObject(dynamicResult, Formatting.None, jsonSetting)
+                , jsonSetting);
+            return result;
+        }
     }
 }

@@ -16,11 +16,11 @@ public class CollectionController : BaseApiController
         _collectionService = collectionService;
     }
 
-    [HttpGet]
-    public async Task<PagedResult<CollectionResponseDto>> Get([FromQuery] PagingWithTimeRequestDTO request)
-    {
-        var results = await _collectionService.ListCollections(request);
+    // [HttpGet]
+    // public async Task<PagedResult<CollectionResponseDto>> Get([FromQuery] PagingWithTimeRequestDTO request)
+    // {
+    //     var results = await _collectionService.ListCollections(request);
 
-        return results;
-    }
+    //     return results;
+    // }
 }

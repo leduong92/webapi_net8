@@ -46,6 +46,4 @@ public class CollectionRequestDto
 
     public DateTime? UpdatedOn { get; set; }
 
-    public virtual Brand Brand { get; set; }
-    public List<Collection> Collections { get; set; }
 }
