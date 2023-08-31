@@ -8,6 +8,8 @@ namespace Core.Interfaces
     {
         Task<PagedResult<ProductResponseDto>> ListProducts(PagingWithTimeRequestDTO request);
         Task<List<ProductResponseDto>> ListProductByCategory(Guid categoryId);
+        Task<List<ProductResponseDto>> ListFeatureds();
+        Task<List<ProductResponseDto>> ListNewProducts();
         Task<ProductResponseDto> AddSingle(ProductRequestDto request);
         Task<ProductResponseDto> UpdateSingle(ProductRequestDto request);
         Task<int> DeleteSingle(ProductRequestDto request);

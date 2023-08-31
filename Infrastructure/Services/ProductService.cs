@@ -1,5 +1,3 @@
-
-
 using System.Net.Http.Headers;
 using Core.Constants;
 using Core.DTO.RequestDto;
@@ -110,21 +108,16 @@ public class ProductService : IProductService
                 images.Add(img);
                 idx++;
             }
-
             product.ProductImages.AddRange(images);
         }
 
         _uow.Repository<ProductImage>().InsertList(images);
-
         _uow.Repository<Product>().Insert(product);
         await _uow.Complete();
 
         var rsp = await this.GetByID(product.Id);
-
         if (rsp == null)
-        {
             return null;
-        }
 
         return rsp;
     }
@@ -132,18 +125,14 @@ public class ProductService : IProductService
     public async Task<int> DeleteSingle(ProductRequestDto request)
     {
         var dbResult = await _uow.Repository<Product>().GetByIdAsync(request.Id);
-
         _uow.Repository<Product>().Delete(dbResult);
-
         return await _uow.Complete();
     }
 
     public async Task<ProductResponseDto> GetByID(Guid id)
     {
         var dbResult = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.Id == id && x.Status == Status.Active, null, "Category,ProductImages")).FirstOrDefault();
-
         var mapping = MapListHelpers.MapObjectToString<ProductResponseDto>(dbResult);
-
         return mapping;
     }
     public async Task<ProductResponseDto> UpdateSingle(ProductRequestDto request)
@@ -151,40 +140,35 @@ public class ProductService : IProductService
         var dbResult = await _uow.Repository<Product>().GetByIdAsync(request.Id);
 
         if (dbResult == null)
-        {
             return null;
-        }
 
-        dbResult.Name = request.Name;
-        dbResult.Sku = request.Sku;
-        dbResult.UrlCode = request.UrlCode;
-        dbResult.DisplayName = request.DisplayName;
-        dbResult.Description = request.Description;
-        dbResult.SeoAlias = request.SeoAlias;
-        dbResult.MetaTitle = request.MetaTitle;
-        dbResult.MetaKeyword = request.MetaKeyword;
-        dbResult.MetaDescription = request.MetaDescription;
-        dbResult.Price = request.Price;
-        dbResult.OriginalPrice = request.OriginalPrice;
-        dbResult.Discount = request.Discount;
+        dbResult.Name = string.IsNullOrEmpty(request.Name) ? dbResult.Name : request.Name;
+        dbResult.Sku = string.IsNullOrEmpty(request.Sku) ? dbResult.Sku : request.Sku;
+        dbResult.UrlCode = string.IsNullOrEmpty(request.UrlCode) ? dbResult.UrlCode : request.UrlCode;
+        dbResult.DisplayName = string.IsNullOrEmpty(request.DisplayName) ? dbResult.DisplayName : request.DisplayName;
+        dbResult.Description = string.IsNullOrEmpty(request.Description) ? dbResult.Description : request.Description;
+        dbResult.SeoAlias = string.IsNullOrEmpty(request.SeoAlias) ? dbResult.SeoAlias : request.SeoAlias;
+        dbResult.MetaTitle = string.IsNullOrEmpty(request.MetaTitle) ? dbResult.MetaTitle : request.MetaTitle;
+        dbResult.MetaKeyword = string.IsNullOrEmpty(request.MetaKeyword) ? dbResult.MetaKeyword : request.MetaKeyword;
+        dbResult.MetaDescription = string.IsNullOrEmpty(request.MetaDescription) ? dbResult.MetaDescription : request.MetaDescription;
+        dbResult.Price = request.Price == 0 ? dbResult.Price : request.Price;
+        dbResult.OriginalPrice = request.OriginalPrice == 0 ? dbResult.OriginalPrice : request.OriginalPrice;
+        dbResult.Discount = request.Discount == 0 ? dbResult.Discount : request.Discount;
         dbResult.IsFeatured = request.IsFeatured;
         dbResult.IsNew = request.IsNew;
         dbResult.IsBestSeller = request.IsBestSeller;
 
-
         if (request.MainImage != null)
         {
             var imagesDelete = (await _uow.Repository<ProductImage>().GetEntityWithSpec(x => x.ProductId == request.Id)).ToList();
-
             _uow.Repository<ProductImage>().Delete(x => x.ProductId == request.Id && x.IsDefault == true);
-
             var img = new ProductImage()
             {
                 Caption = "Main image",
                 FileSize = request.MainImage.Length,
                 Url = await this.SaveFile(request.MainImage),
                 ProductId = request.Id,
-                IsDefault = false,
+                IsDefault = true,
                 SortOrder = 1
             };
             _uow.Repository<ProductImage>().Insert(img);
@@ -215,11 +199,9 @@ public class ProductService : IProductService
         await _uow.Complete();
 
         var rsp = await this.GetByID(dbResult.Id);
-
         if (rsp == null)
-        {
             return null;
-        }
+
         return rsp;
     }
 
@@ -230,4 +212,26 @@ public class ProductService : IProductService
         await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
         return "/" + SystemConstants.IMAGE_CONTENT_FOLDER_NAME + "/" + fileName;
     }
+
+    public async Task<List<ProductResponseDto>> ListFeatureds()
+    {
+        var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.IsFeatured == true && x.Status == Status.Active, null, "Category,ProductImages")).ToList();
+        if (products == null)
+            return null;
+        var mapping = MapListHelpers.MapListObjectToString(products.ToList());
+        var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.Sku).ToList();
+        return lstResults;
+    }
+
+    public async Task<List<ProductResponseDto>> ListNewProducts()
+    {
+        var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.IsNew == true && x.Status == Status.Active, null, "Category,ProductImages")).ToList();
+        if (products == null)
+            return null;
+        var mapping = MapListHelpers.MapListObjectToString(products.ToList());
+        var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.Sku).ToList();
+        return lstResults;
+    }
 }
+
+

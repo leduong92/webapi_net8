@@ -15,9 +15,9 @@ public class ProductRequestDto
     public string MetaTitle { get; set; }
     public string MetaKeyword { get; set; }
     public string MetaDescription { get; set; }
-    public double Price { get; set; }
-    public double OriginalPrice { get; set; }
-    public double Discount { get; set; }
+    public double Price { get; set; } = 0;
+    public double OriginalPrice { get; set; } = 0;
+    public double Discount { get; set; } = 0;
     public bool? IsFeatured { get; set; }
     public bool? IsNew { get; set; }
     public bool? IsBestSeller { get; set; }
