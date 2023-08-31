@@ -1,3 +1,4 @@
+using API.Extensions;
 using Core.DTO.RequestDto;
 using Core.Interfaces;
 using Core.Model;
@@ -16,45 +17,66 @@ public class ProductController : BaseApiController
     }
 
     [HttpGet]
-    public async Task<PagedResult<ProductResponseDto>> ListPaging([FromQuery] PagingWithTimeRequestDTO request)
+    public async Task<IActionResult> ListPaging([FromQuery] PagingWithTimeRequestDTO request)
     {
         var results = await _productService.ListProducts(request);
 
-        return results;
+        return Ok(results);
     }
     [HttpGet("{id}")]
-    public async Task<ProductResponseDto> GetById(Guid id)
+    public async Task<IActionResult> GetById(Guid id)
     {
         var results = await _productService.GetByID(id);
-
-        return results;
+        if (results == null)
+            return BadRequest($"Cannot find product {id}");
+        return Ok(results);
     }
     [HttpGet("category/{categoryId}")]
-    public async Task<List<ProductResponseDto>> GetProductByCategoryId(Guid categoryId)
+    public async Task<IActionResult> GetProductByCategoryId(Guid categoryId)
     {
         var results = await _productService.ListProductByCategory(categoryId);
-
-        return results;
+        if (results == null)
+            return BadRequest($"Cannot find product by category {categoryId}");
+        return Ok(results);
+    }
+    [HttpGet("featureds")]
+    public async Task<IActionResult> ListFeatureds()
+    {
+        var results = await _productService.ListFeatureds();
+        if (results == null)
+            return BadRequest($"Cannot find list featureds");
+        return Ok(results);
+    }
+    [HttpGet("new-product")]
+    public async Task<IActionResult> ListNewProducts()
+    {
+        var results = await _productService.ListNewProducts();
+        if (results == null)
+            return BadRequest($"Cannot find list new products");
+        return Ok(results);
     }
     [HttpPost]
-    public async Task<ProductResponseDto> AddSingle([FromForm] ProductRequestDto request)
+    public async Task<IActionResult> AddSingle([FromForm] ProductRequestDto request)
     {
         var results = await _productService.AddSingle(request);
-
-        return results;
+        if (results == null)
+            return BadRequest($"Cannot add product");
+        return Ok(results);
     }
     [HttpPut]
-    public async Task<ProductResponseDto> UpdateSingle([FromForm] ProductRequestDto request)
+    public async Task<IActionResult> UpdateSingle([FromForm] ProductRequestDto request)
     {
         var results = await _productService.UpdateSingle(request);
-
-        return results;
+        if (results == null)
+            return BadRequest($"Cannot update product");
+        return Ok(results);
     }
     [HttpDelete]
-    public async Task<int> DeleteSingle([FromBody] ProductRequestDto request)
+    public async Task<IActionResult> DeleteSingle([FromBody] ProductRequestDto request)
     {
         var results = await _productService.DeleteSingle(request);
-
-        return results;
+        if (results == 0)
+            return BadRequest($"Cannot delete product {request.Id}");
+        return Ok(results);
     }
 }
