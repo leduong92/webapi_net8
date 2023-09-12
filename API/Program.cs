@@ -33,8 +33,8 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 });
 
-// app.Urls.Add("http://172.18.108.243:5046");
-// app.Urls.Add("http://localhost:5046");
+app.Urls.Add("http://172.18.108.243:5046");
+app.Urls.Add("http://localhost:5046");
 
 app.UseMiddleware<ExceptionMiddleware>();
 // app.UseMiddleware<ApiKeyAuthMiddleware>();
