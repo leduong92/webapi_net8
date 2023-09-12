@@ -27,89 +27,89 @@ public class AuthController : BaseApiController
         return Ok(username);
     }
 
-    [HttpPost("register")]
-    public async Task<ActionResult<User>> Register(UserRequestDto request)
-    {
-        _userService.CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
+    // [HttpPost("register")]
+    // public async Task<ActionResult<User>> Register(UserRequestDto request)
+    // {
+    //     _userService.CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
-        user.Username = request.Username;
-        user.PasswordHash = passwordHash;
-        user.PasswordSalt = passwordSalt;
-
-
-        return Ok(user);
-    }
-    [HttpPost("reset")]
-    public async Task<ActionResult<User>> Reset(UserRequestDto request)
-    {
-        _userService.CreatePasswordHash("123", out byte[] passwordHash, out byte[] passwordSalt);
-
-        user.Username = request.Username;
-        user.PasswordHash = passwordHash;
-        user.PasswordSalt = passwordSalt;
+    //     user.Username = request.Username;
+    //     user.PasswordHash = passwordHash;
+    //     user.PasswordSalt = passwordSalt;
 
 
-        return Ok(user);
-    }
+    //     return Ok(user);
+    // }
+    // [HttpPost("reset")]
+    // public async Task<ActionResult<User>> Reset(UserRequestDto request)
+    // {
+    //     _userService.CreatePasswordHash("123", out byte[] passwordHash, out byte[] passwordSalt);
 
-    [HttpPost("login")]
-    public async Task<ActionResult<UserResponsetDto>> Login(UserRequestDto request)
-    {
-        if (user.Username != request.Username)
-        {
-            return BadRequest("User not found");
-        }
-        if (!_userService.VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
-        {
-            return BadRequest("Wrong password");
-        }
+    //     user.Username = request.Username;
+    //     user.PasswordHash = passwordHash;
+    //     user.PasswordSalt = passwordSalt;
 
-        string token = _userService.CreateToken(user);
 
-        var rsp = new UserResponsetDto()
-        {
-            Username = request.Username,
-            Password = request.Password,
-            Token = token
-        };
-        var refreshToken = _userService.GenerateRefreshToken();
-        SetRefreshToken(refreshToken);
+    //     return Ok(user);
+    // }
 
-        return Ok(rsp);
-    }
+    // [HttpPost("login")]
+    // public async Task<ActionResult<UserResponsetDto>> Login(UserRequestDto request)
+    // {
+    //     if (user.Username != request.Username)
+    //     {
+    //         return BadRequest("User not found");
+    //     }
+    //     if (!_userService.VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
+    //     {
+    //         return BadRequest("Wrong password");
+    //     }
 
-    [HttpPost("refresh-token")]
-    public async Task<ActionResult<string>> RefreshToken()
-    {
-        var refreshToken = Request.Cookies["refreshToken"];
+    //     string token = _userService.CreateToken(user);
 
-        if (!user.RefreshToken.Equals(refreshToken))
-        {
-            return Unauthorized("Invalid Refresh Token.");
-        }
-        else if (user.TokenExpires < DateTime.Now)
-        {
-            return Unauthorized("Token expired.");
-        }
+    //     var rsp = new UserResponsetDto()
+    //     {
+    //         Username = request.Username,
+    //         Password = request.Password,
+    //         Token = token
+    //     };
+    //     var refreshToken = _userService.GenerateRefreshToken();
+    //     SetRefreshToken(refreshToken);
 
-        string token = _userService.CreateToken(user);
-        var newRefreshToken = _userService.GenerateRefreshToken();
-        SetRefreshToken(newRefreshToken);
+    //     return Ok(rsp);
+    // }
 
-        return Ok(token);
-    }
-    private void SetRefreshToken(RefreshToken newRefreshToken)
-    {
-        var cookieOptions = new CookieOptions
-        {
-            HttpOnly = true,
-            Expires = newRefreshToken.Expires
-        };
-        Response.Cookies.Append("refreshToken", newRefreshToken.Token, cookieOptions);
+    // [HttpPost("refresh-token")]
+    // public async Task<ActionResult<string>> RefreshToken()
+    // {
+    //     var refreshToken = Request.Cookies["refreshToken"];
 
-        user.RefreshToken = newRefreshToken.Token;
-        user.TokenCreated = newRefreshToken.Created;
-        user.TokenExpires = newRefreshToken.Expires;
-    }
+    //     if (!user.RefreshToken.Equals(refreshToken))
+    //     {
+    //         return Unauthorized("Invalid Refresh Token.");
+    //     }
+    //     else if (user.TokenExpires < DateTime.Now)
+    //     {
+    //         return Unauthorized("Token expired.");
+    //     }
+
+    //     string token = _userService.CreateToken(user);
+    //     var newRefreshToken = _userService.GenerateRefreshToken();
+    //     SetRefreshToken(newRefreshToken);
+
+    //     return Ok(token);
+    // }
+    // private void SetRefreshToken(RefreshToken newRefreshToken)
+    // {
+    //     var cookieOptions = new CookieOptions
+    //     {
+    //         HttpOnly = true,
+    //         Expires = newRefreshToken.Expires
+    //     };
+    //     Response.Cookies.Append("refreshToken", newRefreshToken.Token, cookieOptions);
+
+    //     user.RefreshToken = newRefreshToken.Token;
+    //     user.TokenCreated = newRefreshToken.Created;
+    //     user.TokenExpires = newRefreshToken.Expires;
+    // }
 
 }
