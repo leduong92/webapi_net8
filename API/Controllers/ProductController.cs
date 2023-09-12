@@ -47,7 +47,7 @@ public class ProductController : BaseApiController
             return BadRequest($"Cannot find list featureds");
         return Ok(results);
     }
-    [HttpGet("new-product")]
+    [HttpGet("newproducts")]
     public async Task<IActionResult> ListNewProducts()
     {
         var results = await _productService.ListNewProducts();

@@ -22,7 +22,7 @@ public class ProductService : IProductService
 
     public async Task<List<ProductResponseDto>> ListProductByCategory(Guid categoryId)
     {
-        var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.CategoryId == categoryId && x.Status == Status.Active, null, "Category")).ToList();
+        var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.CategoryId == categoryId && x.Status == Status.Active, null, "Category,ProductImages")).ToList();
 
         if (products == null)
         {
