@@ -6,14 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-// var conn = builder.Configuration.GetConnectionString("DefaultConnection");
-
-// builder.Services.AddDbContext<TestdbContext>(option =>
-//         option.UseNpgsql(conn)
-// );
-
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddHttpContextAccessor();
@@ -21,17 +13,20 @@ builder.Services.AddHttpContextAccessor();
 // builder.Services.AddSwaggerGen();
 builder.Services.AddSwaggerDocumentation();
 
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders =
+        ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
+
 var app = builder.Build();
+
+app.UseForwardedHeaders();
 
 if (!app.Environment.IsDevelopment())
 {
     app.UseHttpsRedirection();
 }
-
-app.UseForwardedHeaders(new ForwardedHeadersOptions
-{
-    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-});
 
 app.Urls.Add("http://34.124.227.223:5046");
 app.Urls.Add("http://localhost:5046");
