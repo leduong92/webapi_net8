@@ -32,14 +32,7 @@ public class ProductController : BaseApiController
             return BadRequest($"Cannot find product {id}");
         return Ok(results);
     }
-    [HttpGet("{sku}")]
-    public async Task<IActionResult> GetBySku(string sku)
-    {
-        var results = await _productService.GetBySku(sku);
-        if (results == null)
-            return BadRequest($"Cannot find by sku");
-        return Ok(results);
-    }
+
     [HttpGet("category/{categoryId}")]
     public async Task<IActionResult> GetProductByCategoryId(Guid categoryId)
     {

@@ -29,13 +29,7 @@ public class CategoryController : BaseApiController
 
         return results;
     }
-    [HttpGet("{url}")]
-    public async Task<CategoryResponseDto> GetByUrl(string url)
-    {
-        var results = await _categoryService.GetByUrl(url);
 
-        return results;
-    }
     [HttpPost]
     public async Task<CategoryResponseDto> AddSingle([FromBody] CategoryResquestDto request)
     {
