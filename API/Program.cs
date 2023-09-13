@@ -28,8 +28,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHttpsRedirection();
 }
 
-app.Urls.Add("http://34.124.227.223:5046");
-app.Urls.Add("http://localhost:5046");
+// app.Urls.Add("http://34.124.227.223:5046");
+// app.Urls.Add("http://localhost:5046");
 
 app.UseMiddleware<ExceptionMiddleware>();
 // app.UseMiddleware<ApiKeyAuthMiddleware>();
