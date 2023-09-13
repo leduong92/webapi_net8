@@ -11,5 +11,7 @@ namespace Core.Interfaces
         Task<CategoryResponseDto> UpdateSingle(CategoryResquestDto request);
         Task<int> DeleteSingle(CategoryResquestDto request);
         Task<CategoryResponseDto> GetByID(Guid id);
+        Task<CategoryResponseDto> GetByUrl(string url);
+        
     }
 }

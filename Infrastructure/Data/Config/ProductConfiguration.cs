@@ -15,7 +15,7 @@ namespace Infrastructure.Data.Config
             builder.ToTable("products");
 
             builder.HasKey(x => x.Id);
-
+            
             builder.HasIndex(x => new { x.Id, x.Name, x.Sku, x.UrlCode });
             builder.Property(e => e.Name).HasMaxLength(128);
             builder.Property(e => e.Sku).HasMaxLength(128);

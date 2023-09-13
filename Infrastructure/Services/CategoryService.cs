@@ -77,6 +77,13 @@ public class CategoryService : ICategoryService
         };
     }
 
+    public async Task<CategoryResponseDto> GetByUrl(string url)
+    {
+        var dbResult = (await _uow.Repository<Category>().GetEntityWithSpec(x => x.UrlCode == url && x.Status == Status.Active, null)).FirstOrDefault();
+        var mapping = MapListHelpers.MapObjectToString<CategoryResponseDto>(dbResult);
+        return mapping;
+    }
+
     public async Task<List<CategoryResponseDto>> ListCategory()
     {
         var result = (await _uow.Repository<Category>().GetEntityWithSpec(e => e.Status != Status.InActive)).ToList();

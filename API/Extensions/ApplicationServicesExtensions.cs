@@ -26,6 +26,7 @@ namespace API.Extensions
 
             services.AddTransient<ICollectionService, CollectionService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IOrderService, OrderService>();
 
             services.AddTransient<IStorageService, FileStorageService>();
 

@@ -101,8 +101,8 @@ namespace Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3f17239b-a420-4597-8cbd-0c188e1d4ada"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(8962),
+                            Id = new Guid("9084363c-2404-45c5-a611-673ba2846a6c"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2727),
                             DisplayName = "Hạt Macca",
                             IsShowOnHome = true,
                             MetaDescription = "Hạt Macca là hạt giống của cây macadamia, có nguồn gốc từ Úc và được trồng ở nhiều nơi trên thế giới, chằng hạn như Brazil, Costa Rica, Hawaii, New Zealand, trong đó có Việt Nam",
@@ -116,8 +116,8 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("0e6b14eb-242d-46ec-b90b-75559c14df26"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(8975),
+                            Id = new Guid("76de0415-456b-44fa-9945-db3d3b7f1b87"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2739),
                             DisplayName = "Hạnh nhân",
                             IsShowOnHome = true,
                             MetaDescription = "Hạnh nhân có nguồn gốc từ Trung Đông. Hạnh nhân được bán sống hoặc rang. Chúng cũng được sử dụng để sản xuất sữa hạnh nhân, dầu, bơ, bột hoặc bột nhão. Trong 28 gram hạnh nhân có chứa hàm lượng chất",
@@ -131,8 +131,8 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d3a7f832-fb28-4458-97b4-90d0bb61b622"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(8978),
+                            Id = new Guid("22b875fb-62de-4b86-acdd-52ee130b1bb8"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2742),
                             DisplayName = "Mix hạt dinh dưỡng",
                             IsShowOnHome = true,
                             MetaDescription = "Hạt dinh dưỡng được hiểu một cách đơn giản là các loại hạt có vỏ cứng và tách vỏ khi dùng như hạt hạnh nhân, óc chó, điều, bí xanh…Những loại hạt này cung cấp cho cơ thể nhiều dưỡng chất cần thiết và được sử dụng rất nhiều để ăn kiêng, ăn chay.",
@@ -146,8 +146,8 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6c5d6237-94b0-47bb-9f2c-1f4d89e74043"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(8980),
+                            Id = new Guid("3b8472f6-2d18-4770-a449-d2f3a4ad09ef"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2744),
                             DisplayName = "Granola",
                             IsShowOnHome = true,
                             MetaDescription = "Granola",
@@ -161,8 +161,8 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2ba2070c-d658-4348-a490-d22c1baaed75"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(8983),
+                            Id = new Guid("71f8cfd2-f0ab-49ae-9059-b0df1109c016"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2747),
                             DisplayName = "Hạt óc chó",
                             IsShowOnHome = true,
                             MetaDescription = "Hạt óc chó",
@@ -176,8 +176,8 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("030bfb43-c2d2-4921-9cdf-6109caa104cb"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(8985),
+                            Id = new Guid("58ee6eda-23e8-436e-bc8d-c62f66b47e2d"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2750),
                             DisplayName = "Hạt điều",
                             IsShowOnHome = true,
                             MetaDescription = "Hạt điều",
@@ -191,8 +191,8 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7e6e5f6f-9f18-42fb-91ff-418e09261fb4"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(8991),
+                            Id = new Guid("ef9ef129-b647-47b1-82c8-2015d57eb90a"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2752),
                             DisplayName = "Bánh kẹp hạt dinh dưỡng",
                             IsShowOnHome = true,
                             MetaDescription = "Bánh kẹp hạt dinh dưỡng",
@@ -204,6 +204,100 @@ namespace Infrastructure.Data.Migrations
                             Status = 1,
                             UrlCode = "banh-kep-hat-dinh-duong"
                         });
+                });
+
+            modelBuilder.Entity("Core.Entities.Order", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("BuyerAddress")
+                        .HasColumnType("text");
+
+                    b.Property<string>("BuyerEmail")
+                        .HasColumnType("text");
+
+                    b.Property<string>("BuyerName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("BuyerPhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("CreatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id");
+
+                    b.ToTable("orders", (string)null);
+                });
+
+            modelBuilder.Entity("Core.Entities.OrderItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("CreatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid?>("OrderId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("PictureUrl")
+                        .HasColumnType("text");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("double precision");
+
+                    b.Property<Guid>("ProductItemId")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("ProductName")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Sku")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("UpdatedOn")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("order_items", (string)null);
                 });
 
             modelBuilder.Entity("Core.Entities.Product", b =>
@@ -296,9 +390,9 @@ namespace Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6fe5001c-0cc9-4873-a826-81676479ec52"),
-                            CategoryId = new Guid("3f17239b-a420-4597-8cbd-0c188e1d4ada"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9217),
+                            Id = new Guid("37ad7bb3-21a3-4afd-9fd0-fc8b6a6efbdb"),
+                            CategoryId = new Guid("9084363c-2404-45c5-a611-673ba2846a6c"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2955),
                             Description = "Hạt Macca là hạt giống của cây macadamia, có nguồn gốc từ Úc và được trồng ở nhiều nơi trên thế giới, chằng hạn như Brazil, Costa Rica, Hawaii, New Zealand, trong đó có Việt Nam...\r\n                    Đây được xem là nữ hoàng của các loại hạt vì rất giàu dinh dưỡng, phù hợp với mọi lứa tuổi. Hạt mắc ca có hình cầu khoảng 20-30mm, hương thơm, vị béo ngậy đặc trưng...\r\n                    Tất cả các hạt đều đã được sấy giòn được tách vỏ chỉ còn nhân trắng nguyên bên trong giữ được 100% vị ngon tự nhiên.",
                             Discount = 20000.0,
                             DisplayName = "Hạt Macca nhân nguyên",
@@ -318,9 +412,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("31b72883-ee9d-45b7-9770-51f4d7d2ba2f"),
-                            CategoryId = new Guid("3f17239b-a420-4597-8cbd-0c188e1d4ada"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9226),
+                            Id = new Guid("b5752e06-efd5-4f8a-b3f3-a9095d66b5fa"),
+                            CategoryId = new Guid("9084363c-2404-45c5-a611-673ba2846a6c"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2970),
                             Description = "Hạt Macca là hạt giống của cây macadamia, có nguồn gốc từ Úc và được trồng ở nhiều nơi trên thế giới, chằng hạn như Brazil, Costa Rica, Hawaii, New Zealand, trong đó có Việt Nam...\r\n                    Đây được xem là nữ hoàng của các loại hạt vì rất giàu dinh dưỡng, phù hợp với mọi lứa tuổi. Hạt mắc ca có hình cầu khoảng 20-30mm, hương thơm, vị béo ngậy đặc trưng...\r\n                    Tất cả các hạt đều đã được sấy giòn được tách vỏ chỉ còn nhân trắng nguyên bên trong giữ được 100% vị ngon tự nhiên.",
                             Discount = 10000.0,
                             DisplayName = "Hạt Macca nhân nguyên",
@@ -340,12 +434,12 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4f4055a6-eb23-41c5-b885-1672c207e273"),
-                            CategoryId = new Guid("3f17239b-a420-4597-8cbd-0c188e1d4ada"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9230),
+                            Id = new Guid("ca430471-102c-4bdb-8774-8556b89098b5"),
+                            CategoryId = new Guid("9084363c-2404-45c5-a611-673ba2846a6c"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2974),
                             Description = "Hạt Macca là hạt giống của cây macadamia, có nguồn gốc từ Úc và được trồng ở nhiều nơi trên thế giới, chằng hạn như Brazil, Costa Rica, Hawaii, New Zealand, trong đó có Việt Nam...\r\n                    Đây được xem là nữ hoàng của các loại hạt vì rất giàu dinh dưỡng, phù hợp với mọi lứa tuổi. Hạt mắc ca có hình cầu khoảng 20-30mm, hương thơm, vị béo ngậy đặc trưng...\r\n                    Tất cả các hạt đều đã được sấy giòn được tách vỏ chỉ còn nhân trắng nguyên bên trong giữ được 100% vị ngon tự nhiên.",
                             Discount = 5000.0,
-                            DisplayName = "Hạt Macca nứt vỏ (size A)",
+                            DisplayName = "Hạt Macca nứt vỏ (A)",
                             IsBestSeller = true,
                             IsFeatured = true,
                             IsNew = false,
@@ -362,12 +456,12 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("c09653ee-9781-4b47-b1b9-23975c147bc5"),
-                            CategoryId = new Guid("3f17239b-a420-4597-8cbd-0c188e1d4ada"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9234),
+                            Id = new Guid("9395fc8c-1e4b-43fc-80a5-a6dab7025246"),
+                            CategoryId = new Guid("9084363c-2404-45c5-a611-673ba2846a6c"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2978),
                             Description = "Hạt Macca là hạt giống của cây macadamia, có nguồn gốc từ Úc và được trồng ở nhiều nơi trên thế giới, chằng hạn như Brazil, Costa Rica, Hawaii, New Zealand, trong đó có Việt Nam...\r\n                    Đây được xem là nữ hoàng của các loại hạt vì rất giàu dinh dưỡng, phù hợp với mọi lứa tuổi. Hạt mắc ca có hình cầu khoảng 20-30mm, hương thơm, vị béo ngậy đặc trưng...\r\n                    Tất cả các hạt đều đã được sấy giòn được tách vỏ chỉ còn nhân trắng nguyên bên trong giữ được 100% vị ngon tự nhiên.",
                             Discount = 5000.0,
-                            DisplayName = "Hạt Macca nứt vỏ (size B)",
+                            DisplayName = "Hạt Macca nứt vỏ (B)",
                             IsBestSeller = false,
                             IsFeatured = true,
                             IsNew = true,
@@ -384,9 +478,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("02306207-f983-4bcc-b7ec-70221cee8dc7"),
-                            CategoryId = new Guid("d3a7f832-fb28-4458-97b4-90d0bb61b622"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9240),
+                            Id = new Guid("0315ea40-5ab4-4e46-aabe-a8257ea79958"),
+                            CategoryId = new Guid("22b875fb-62de-4b86-acdd-52ee130b1bb8"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2981),
                             Description = "Hạt dinh dưỡng được hiểu một cách đơn giản là các loại hạt có vỏ cứng và tách vỏ khi dùng như hạt hạnh nhân, óc chó, điều, bí xanh…Những loại hạt này cung cấp cho cơ thể nhiều dưỡng chất cần thiết và được sử dụng rất nhiều để ăn kiêng, ăn chay. Mix 5 loại hạt gồm Óc chó đỏ, Hạnh Nhân, Hạt điều, Óc chó vàng, Macca mang đến cho bạn nguồn dinh dưỡng tự nhiên, đa dạng. ",
                             Discount = 10000.0,
                             DisplayName = "MIX hạt cao cấp",
@@ -406,9 +500,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("deebff1d-3097-46f3-b299-b7025c6688a7"),
-                            CategoryId = new Guid("d3a7f832-fb28-4458-97b4-90d0bb61b622"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9245),
+                            Id = new Guid("bedb9399-6d7e-430c-8219-c62189479dc7"),
+                            CategoryId = new Guid("22b875fb-62de-4b86-acdd-52ee130b1bb8"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2985),
                             Description = "Hạt dinh dưỡng được hiểu một cách đơn giản là các loại hạt có vỏ cứng và tách vỏ khi dùng như hạt hạnh nhân, óc chó, điều, bí xanh…Những loại hạt này cung cấp cho cơ thể nhiều dưỡng chất cần thiết và được sử dụng rất nhiều để ăn kiêng, ăn chay. Mix 6 loại hạt gồm Óc chó đỏ, Hạnh Nhân, Hạt điều, Óc chó vàng, Macca, Bí xanh mang đến cho bạn nguồn dinh dưỡng tự nhiên, đa dạng. ",
                             Discount = 10000.0,
                             DisplayName = "MIX 6 hạt dinh dưỡng",
@@ -428,9 +522,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("42fe6086-ea71-4c84-8197-bc72cb2eaba6"),
-                            CategoryId = new Guid("0e6b14eb-242d-46ec-b90b-75559c14df26"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9248),
+                            Id = new Guid("a1cd9775-a270-41b3-bb53-1d5152e2d329"),
+                            CategoryId = new Guid("76de0415-456b-44fa-9945-db3d3b7f1b87"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2989),
                             Description = "Hạnh nhân có nguồn gốc từ Trung Đông. Hạnh nhân được bán sống hoặc rang. Chúng cũng được sử dụng để sản xuất sữa hạnh nhân, dầu, bơ, bột...",
                             Discount = 5000.0,
                             DisplayName = "Hạnh nhân rang bơ",
@@ -450,9 +544,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3cc41fff-3203-441b-acfc-6273def75b42"),
-                            CategoryId = new Guid("0e6b14eb-242d-46ec-b90b-75559c14df26"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9255),
+                            Id = new Guid("85fc6fac-243e-40a3-ae8f-90c271cbd541"),
+                            CategoryId = new Guid("76de0415-456b-44fa-9945-db3d3b7f1b87"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2992),
                             Description = "Hạnh nhân có nguồn gốc từ Trung Đông. Hạnh nhân được bán sống hoặc rang. Chúng cũng được sử dụng để sản xuất sữa hạnh nhân, dầu, bơ, bột...",
                             Discount = 5000.0,
                             DisplayName = "Hạnh nhân sấy",
@@ -472,9 +566,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4e254c2a-9083-49dd-93f0-cc86f78502bc"),
-                            CategoryId = new Guid("2ba2070c-d658-4348-a490-d22c1baaed75"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9259),
+                            Id = new Guid("ad48622a-f7cb-4244-8497-bb213ae72dc6"),
+                            CategoryId = new Guid("71f8cfd2-f0ab-49ae-9059-b0df1109c016"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(2995),
                             Description = "Hạt óc chó đỏ là loại hạt óc chó không biến đổi Gen được tạo ra bằng phương pháp lai tạo tự nhiên. Sở dĩ được gọi là hạt óc chó đỏ bởi vì sau khi tách lớp vỏ cứng bên ngoài thì nhân bên trong có một lớp vỏ lụa màu đỏ, thịt bên trong nhân là màu trắng sữa.",
                             Discount = 10000.0,
                             DisplayName = "Hạt óc chó đỏ",
@@ -494,9 +588,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3aeb1881-6bc5-4ffa-9a8e-eabf2ca215e1"),
-                            CategoryId = new Guid("2ba2070c-d658-4348-a490-d22c1baaed75"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9262),
+                            Id = new Guid("e8e263bc-a93f-4a16-bf87-ccac16662477"),
+                            CategoryId = new Guid("71f8cfd2-f0ab-49ae-9059-b0df1109c016"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3001),
                             Description = "Hạt óc chó vàng là loại hạt óc chó được trồng thông dụng nhất hiện nay tại Mỹ, Úc, Anh, Trung Quốc… Sở dĩ gọi là hạt óc chó vàng bởi vì sau khi tách lớp vỏ cứng bên ngoài thì nhân bên trong có một lớp vỏ lụa màu vàng, thịt bên trong nhân là màu trắng sữa.",
                             Discount = 10000.0,
                             DisplayName = "Hạt óc chó vàng",
@@ -516,9 +610,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("5875eb00-05d2-4ee9-98c4-277ba5474d39"),
-                            CategoryId = new Guid("6c5d6237-94b0-47bb-9f2c-1f4d89e74043"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9267),
+                            Id = new Guid("352660e6-3512-4001-899e-219fe0e7a68b"),
+                            CategoryId = new Guid("3b8472f6-2d18-4770-a449-d2f3a4ad09ef"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3004),
                             Description = "Granola là món ăn quen thuộc của người Mỹ vào buổi sáng, đây là hỗn hợp của nhiều thực phẩm lành lạnh với hàm lượng chất dinh dưỡng cao, nhất là giàu protein. Granola gồm các loại hạt dinh dưỡng, trái cây khô, yến mạch,…. được sấy giòn, giữ được 100% hương vị tươi ngon tự nhiên.",
                             Discount = 10000.0,
                             DisplayName = "Granola",
@@ -538,9 +632,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("e0638d29-bc83-4104-8161-e76b4a952145"),
-                            CategoryId = new Guid("030bfb43-c2d2-4921-9cdf-6109caa104cb"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9270),
+                            Id = new Guid("131ccfe0-4c13-4816-9053-d1f63b0fa7b8"),
+                            CategoryId = new Guid("58ee6eda-23e8-436e-bc8d-c62f66b47e2d"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3008),
                             Description = "Hạt điều là hạt thuộc họ Anacardium occidentale có nguồn gốc từ Brazil được trồng nhiều ở các tỉnh phía Nam của Việt Nam. Ngoài hương vị thơm ngon thì hạt điều còn có giá trị dinh dưỡng cao cùng với những công dụng tuyệt vời đối với sức khỏe con người.",
                             Discount = 10000.0,
                             DisplayName = "Hạt điều xếp hoa",
@@ -560,9 +654,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7b4186af-bf18-494c-a941-8c6b1ecc33a0"),
-                            CategoryId = new Guid("030bfb43-c2d2-4921-9cdf-6109caa104cb"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9274),
+                            Id = new Guid("ea470a97-183a-4645-8e95-65e6c682c592"),
+                            CategoryId = new Guid("58ee6eda-23e8-436e-bc8d-c62f66b47e2d"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3012),
                             Description = "Hạt điều là hạt thuộc họ Anacardium occidentale có nguồn gốc từ Brazil được trồng nhiều ở các tỉnh phía Nam của Việt Nam. Ngoài hương vị thơm ngon thì hạt điều còn có giá trị dinh dưỡng cao cùng với những công dụng tuyệt vời đối với sức khỏe con người.",
                             Discount = 10000.0,
                             DisplayName = "Hạt điều sấy",
@@ -582,9 +676,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("6018769a-736d-40b8-9d5d-8a69b42877a9"),
-                            CategoryId = new Guid("030bfb43-c2d2-4921-9cdf-6109caa104cb"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9277),
+                            Id = new Guid("fde12524-990e-4758-b2e5-9a512d067d86"),
+                            CategoryId = new Guid("58ee6eda-23e8-436e-bc8d-c62f66b47e2d"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3016),
                             Description = "Hạt điều là hạt thuộc họ Anacardium occidentale có nguồn gốc từ Brazil được trồng nhiều ở các tỉnh phía Nam của Việt Nam. Ngoài hương vị thơm ngon thì hạt điều còn có giá trị dinh dưỡng cao cùng với những công dụng tuyệt vời đối với sức khỏe con người.",
                             Discount = 5000.0,
                             DisplayName = "Hạt điều lon pet",
@@ -604,9 +698,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cf229b93-7d33-406c-af26-53633d301a19"),
-                            CategoryId = new Guid("7e6e5f6f-9f18-42fb-91ff-418e09261fb4"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9281),
+                            Id = new Guid("517f347e-4316-43fe-a0d2-8ae5940b2bcc"),
+                            CategoryId = new Guid("ef9ef129-b647-47b1-82c8-2015d57eb90a"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3020),
                             Description = "Hạt điều là hạt thuộc họ Anacardium occidentale có nguồn gốc từ Brazil được trồng nhiều ở các tỉnh phía Nam của Việt Nam. Ngoài hương vị thơm ngon thì hạt điều còn có giá trị dinh dưỡng cao cùng với những công dụng tuyệt vời đối với sức khỏe con người.",
                             Discount = 10000.0,
                             DisplayName = "Bánh hạt điều",
@@ -626,9 +720,9 @@ namespace Infrastructure.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("18495028-3944-4d00-b2af-9292a6b2dcaa"),
-                            CategoryId = new Guid("7e6e5f6f-9f18-42fb-91ff-418e09261fb4"),
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9287),
+                            Id = new Guid("7bf93173-9db6-46dc-bee8-47dc6ab9f30c"),
+                            CategoryId = new Guid("ef9ef129-b647-47b1-82c8-2015d57eb90a"),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3070),
                             Description = "Hạt điều là hạt thuộc họ Anacardium occidentale có nguồn gốc từ Brazil được trồng nhiều ở các tỉnh phía Nam của Việt Nam. Ngoài hương vị thơm ngon thì hạt điều còn có giá trị dinh dưỡng cao cùng với những công dụng tuyệt vời đối với sức khỏe con người.",
                             Discount = 10000.0,
                             DisplayName = "Bánh rong biển kẹp hạt",
@@ -701,444 +795,444 @@ namespace Infrastructure.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4440468f-f4e4-4ade-8014-5744a5eff0fc"),
+                            Id = new Guid("e6e3a368-4579-4ad6-93ff-e75428224341"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9352),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3098),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("6fe5001c-0cc9-4873-a826-81676479ec52"),
+                            ProductId = new Guid("37ad7bb3-21a3-4afd-9fd0-fc8b6a6efbdb"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/nhanvo_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("c4b9964d-79f7-4336-adf8-4743fac2ee56"),
+                            Id = new Guid("d6ba7e01-3dbb-4dbb-9bdf-fd3e8e9c0aaa"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9357),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3106),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("6fe5001c-0cc9-4873-a826-81676479ec52"),
+                            ProductId = new Guid("37ad7bb3-21a3-4afd-9fd0-fc8b6a6efbdb"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/nhanvo_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("0d8bd15c-4926-4476-a771-2e8027dc116f"),
+                            Id = new Guid("3c819277-8de3-4266-a27f-d88887585f34"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9360),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3109),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("6fe5001c-0cc9-4873-a826-81676479ec52"),
+                            ProductId = new Guid("37ad7bb3-21a3-4afd-9fd0-fc8b6a6efbdb"),
                             SortOrder = 4,
                             Status = 1,
                             Url = "/images/nhanvo_03.jpg"
                         },
                         new
                         {
-                            Id = new Guid("a2acea8f-6f37-4dd3-87f5-7484a1acd14e"),
+                            Id = new Guid("89133793-0223-4362-8156-2d18b3049a0a"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9362),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3111),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("6fe5001c-0cc9-4873-a826-81676479ec52"),
+                            ProductId = new Guid("37ad7bb3-21a3-4afd-9fd0-fc8b6a6efbdb"),
                             SortOrder = 4,
                             Status = 1,
                             Url = "/images/nhanvo_04.jpg"
                         },
                         new
                         {
-                            Id = new Guid("e057e570-813a-4569-aee8-6b7d37090740"),
+                            Id = new Guid("a7b4b55f-0258-4e7e-8e26-21cf28cb5537"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9367),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3114),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("31b72883-ee9d-45b7-9770-51f4d7d2ba2f"),
+                            ProductId = new Guid("b5752e06-efd5-4f8a-b3f3-a9095d66b5fa"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/nhannguyen_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("8a804d4c-539a-45f1-bb4d-660b0dc57c09"),
+                            Id = new Guid("b9b342a8-ab93-492e-b399-a227c704127f"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9370),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3119),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("31b72883-ee9d-45b7-9770-51f4d7d2ba2f"),
+                            ProductId = new Guid("b5752e06-efd5-4f8a-b3f3-a9095d66b5fa"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/nhannguyen_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("fee79c1e-2e01-4bc4-9632-af2199e4550c"),
+                            Id = new Guid("b1dc696f-2e62-4029-b57f-68e358e020f7"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9372),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3121),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("31b72883-ee9d-45b7-9770-51f4d7d2ba2f"),
+                            ProductId = new Guid("b5752e06-efd5-4f8a-b3f3-a9095d66b5fa"),
                             SortOrder = 3,
                             Status = 1,
                             Url = "/images/nhannguyen_03.jpg"
                         },
                         new
                         {
-                            Id = new Guid("f3a39995-f182-4b4a-a10e-4dbd5197d58a"),
+                            Id = new Guid("a033ed23-2392-430c-8e71-f95ee410a10c"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9375),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3124),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("31b72883-ee9d-45b7-9770-51f4d7d2ba2f"),
+                            ProductId = new Guid("b5752e06-efd5-4f8a-b3f3-a9095d66b5fa"),
                             SortOrder = 4,
                             Status = 1,
                             Url = "/images/nhannguyen_04.jpg"
                         },
                         new
                         {
-                            Id = new Guid("f7fbe196-8bdf-48aa-8fe4-1076b87f8d1f"),
+                            Id = new Guid("eb4aa156-dae6-4368-8d46-f7cef6583722"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9379),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3127),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("c09653ee-9781-4b47-b1b9-23975c147bc5"),
+                            ProductId = new Guid("9395fc8c-1e4b-43fc-80a5-a6dab7025246"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/nutvo_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("97ebb7e0-bd66-457b-a21c-e4207f0365ce"),
+                            Id = new Guid("7a276d78-4a39-44e9-b46a-be3c7b73d7cc"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9382),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3131),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("c09653ee-9781-4b47-b1b9-23975c147bc5"),
+                            ProductId = new Guid("9395fc8c-1e4b-43fc-80a5-a6dab7025246"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/nutvo_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("08598ca8-1126-460a-b2af-b0ae3bdf0ec9"),
+                            Id = new Guid("baa1e58d-e2c9-473c-a04f-2afa1111b26f"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9384),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3134),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("4f4055a6-eb23-41c5-b885-1672c207e273"),
+                            ProductId = new Guid("ca430471-102c-4bdb-8774-8556b89098b5"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/nutvolon_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("61a0fe7f-1ec4-47db-8d6a-c67bbe7c4af4"),
+                            Id = new Guid("eb40e0b1-3d9b-418b-980f-bf33f6dd3793"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9387),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3136),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("4f4055a6-eb23-41c5-b885-1672c207e273"),
+                            ProductId = new Guid("ca430471-102c-4bdb-8774-8556b89098b5"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/nutvolon_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("0a44ed2a-d49e-4704-949c-c2f32947b91e"),
+                            Id = new Guid("e2c6af42-6309-46ac-aabd-711d69bbca8b"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9391),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3139),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("02306207-f983-4bcc-b7ec-70221cee8dc7"),
+                            ProductId = new Guid("0315ea40-5ab4-4e46-aabe-a8257ea79958"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/mix_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("6dd8fdff-19ed-4da2-ba38-143bd549042c"),
+                            Id = new Guid("02529555-5e67-44f8-a7b4-a431fe50eb72"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9394),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3143),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("deebff1d-3097-46f3-b299-b7025c6688a7"),
+                            ProductId = new Guid("bedb9399-6d7e-430c-8219-c62189479dc7"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/mixcc_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("a063a6eb-826d-44ec-85c2-c67f569f758b"),
+                            Id = new Guid("4fac59bd-4c69-46ac-9bcb-48785383cc22"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9396),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3145),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("deebff1d-3097-46f3-b299-b7025c6688a7"),
+                            ProductId = new Guid("bedb9399-6d7e-430c-8219-c62189479dc7"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/mix_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("1e7052a5-dc4d-4039-b484-2a275bb46fa6"),
+                            Id = new Guid("e4f0aac5-6202-49b4-82f5-e71f3d28cef2"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9399),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3148),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("3cc41fff-3203-441b-acfc-6273def75b42"),
+                            ProductId = new Guid("85fc6fac-243e-40a3-ae8f-90c271cbd541"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/hanhnhan_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("c749cd4e-9c35-44d6-b6b6-804ad7919713"),
+                            Id = new Guid("11566685-5b83-4036-863d-8af450c80739"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9403),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3151),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("3cc41fff-3203-441b-acfc-6273def75b42"),
+                            ProductId = new Guid("85fc6fac-243e-40a3-ae8f-90c271cbd541"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/hanhnhan_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("f9d89a63-9a03-4a06-8372-ac0ce649aaa0"),
+                            Id = new Guid("8cc35af1-b4de-4784-ac59-624c52d92736"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9406),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3155),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("3cc41fff-3203-441b-acfc-6273def75b42"),
+                            ProductId = new Guid("85fc6fac-243e-40a3-ae8f-90c271cbd541"),
                             SortOrder = 3,
                             Status = 1,
                             Url = "/images/hanhnhan_03.jpg"
                         },
                         new
                         {
-                            Id = new Guid("9bc06aaf-b62f-416c-8848-84780a7bc627"),
+                            Id = new Guid("159112ba-592e-47f6-a8fe-f41e5ddc7c17"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9408),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3157),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("42fe6086-ea71-4c84-8197-bc72cb2eaba6"),
+                            ProductId = new Guid("a1cd9775-a270-41b3-bb53-1d5152e2d329"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/hanhnhan_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("78dde65a-3184-4aaa-8305-ee630c0a5fb2"),
+                            Id = new Guid("8964ca4a-d5c2-46ad-aad3-5cf05048ea88"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9411),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3160),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("42fe6086-ea71-4c84-8197-bc72cb2eaba6"),
+                            ProductId = new Guid("a1cd9775-a270-41b3-bb53-1d5152e2d329"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/hanhnhan_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("b88cef82-538d-4b55-8e16-8011e79cfd36"),
+                            Id = new Guid("c5fb9d18-65ba-4c5b-b0db-5a23e3c29305"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9415),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3163),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("42fe6086-ea71-4c84-8197-bc72cb2eaba6"),
+                            ProductId = new Guid("a1cd9775-a270-41b3-bb53-1d5152e2d329"),
                             SortOrder = 3,
                             Status = 1,
                             Url = "/images/hanhnhan_03.jpg"
                         },
                         new
                         {
-                            Id = new Guid("46446d1f-67f9-479b-8bc2-af2bc92f3292"),
+                            Id = new Guid("ad73c45a-a30a-4a6e-b16c-f6808e740418"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9418),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3167),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("4e254c2a-9083-49dd-93f0-cc86f78502bc"),
+                            ProductId = new Guid("ad48622a-f7cb-4244-8497-bb213ae72dc6"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/occhodo_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("6fe6cc1c-4ddd-4684-a554-0d117cc596a1"),
+                            Id = new Guid("376494d1-6b66-4992-8df9-ca9483443079"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9420),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3169),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("4e254c2a-9083-49dd-93f0-cc86f78502bc"),
+                            ProductId = new Guid("ad48622a-f7cb-4244-8497-bb213ae72dc6"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/occhodo_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("1d14c9bf-93a3-4cc1-ae93-5985eaf81957"),
+                            Id = new Guid("754e8301-9bdd-4084-931e-836f6870df5b"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9464),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3172),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("3aeb1881-6bc5-4ffa-9a8e-eabf2ca215e1"),
+                            ProductId = new Guid("e8e263bc-a93f-4a16-bf87-ccac16662477"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/occhovang_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("537e1bb9-2ff6-4bc4-a11a-fdd1481ea252"),
+                            Id = new Guid("8f9ec34b-e7e4-46e4-934b-3528471cf04a"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9469),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3174),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("3aeb1881-6bc5-4ffa-9a8e-eabf2ca215e1"),
+                            ProductId = new Guid("e8e263bc-a93f-4a16-bf87-ccac16662477"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/occhovang_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("fd7f3a72-612b-49ad-be1f-6e44ee69064a"),
+                            Id = new Guid("bd3f3632-11f9-4060-a318-25f23602e121"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9472),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3179),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("5875eb00-05d2-4ee9-98c4-277ba5474d39"),
+                            ProductId = new Guid("352660e6-3512-4001-899e-219fe0e7a68b"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/granola_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("4e5ab9fe-8058-47e3-85cf-79ad07bcfd76"),
+                            Id = new Guid("ab650626-6f0e-407d-b3ab-c08a4447434d"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9474),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3181),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("5875eb00-05d2-4ee9-98c4-277ba5474d39"),
+                            ProductId = new Guid("352660e6-3512-4001-899e-219fe0e7a68b"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/granola_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("2439a6bb-0eb3-4d6c-b726-483d37f43b8e"),
+                            Id = new Guid("a6264597-5390-450e-a7e3-d7b61aed3ab5"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9477),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3184),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("5875eb00-05d2-4ee9-98c4-277ba5474d39"),
+                            ProductId = new Guid("352660e6-3512-4001-899e-219fe0e7a68b"),
                             SortOrder = 3,
                             Status = 1,
                             Url = "/images/granola_03.jpg"
                         },
                         new
                         {
-                            Id = new Guid("c260f5fe-ae95-4d66-ada4-7c3d0063bcf0"),
+                            Id = new Guid("0a6b3ffa-0632-435b-aa89-72516c122648"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9481),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3186),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("6018769a-736d-40b8-9d5d-8a69b42877a9"),
+                            ProductId = new Guid("fde12524-990e-4758-b2e5-9a512d067d86"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/dieupet_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("c3a5e39b-b268-4591-bc81-7874935ef8ef"),
+                            Id = new Guid("774e652a-6b2c-4f22-95bc-69067ccb78ce"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9483),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3191),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("7b4186af-bf18-494c-a941-8c6b1ecc33a0"),
+                            ProductId = new Guid("ea470a97-183a-4645-8e95-65e6c682c592"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/dieusay_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("9b71006d-73fa-4b66-84c1-8d4d8e365e89"),
+                            Id = new Guid("b5178767-41df-4228-97b5-49c92d92d8ec"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9486),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3193),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("e0638d29-bc83-4104-8161-e76b4a952145"),
+                            ProductId = new Guid("131ccfe0-4c13-4816-9053-d1f63b0fa7b8"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/dieuxephoa_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("5fd6f001-d42f-4c3c-8379-774459f58b55"),
+                            Id = new Guid("78fcf70f-01ab-41bb-8847-caa3b7efd7b6"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9488),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3196),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("cf229b93-7d33-406c-af26-53633d301a19"),
+                            ProductId = new Guid("517f347e-4316-43fe-a0d2-8ae5940b2bcc"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/banhdieu_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("cd07005a-f2c7-4935-a575-cd4e5f0a5979"),
+                            Id = new Guid("e14666dd-be03-4da4-b834-6aa983bb9572"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9493),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3198),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("cf229b93-7d33-406c-af26-53633d301a19"),
+                            ProductId = new Guid("517f347e-4316-43fe-a0d2-8ae5940b2bcc"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/banhdieu_02.jpg"
                         },
                         new
                         {
-                            Id = new Guid("0ef3e1b8-bba0-431c-b9db-7213c12d8008"),
+                            Id = new Guid("a71a49fb-e6c9-4572-993d-b1d906cea970"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9495),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3203),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("cf229b93-7d33-406c-af26-53633d301a19"),
+                            ProductId = new Guid("517f347e-4316-43fe-a0d2-8ae5940b2bcc"),
                             SortOrder = 3,
                             Status = 1,
                             Url = "/images/banhdieu_03.jpg"
                         },
                         new
                         {
-                            Id = new Guid("73e60cad-ba66-4d41-a7b0-521cf9bf09f0"),
+                            Id = new Guid("869addcd-4db7-435f-a28f-2c192085073a"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9497),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3205),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("cf229b93-7d33-406c-af26-53633d301a19"),
+                            ProductId = new Guid("517f347e-4316-43fe-a0d2-8ae5940b2bcc"),
                             SortOrder = 3,
                             Status = 1,
                             Url = "/images/banhdieu_03.jpg"
                         },
                         new
                         {
-                            Id = new Guid("cbbc9644-113c-4854-bbed-df0b886f0226"),
+                            Id = new Guid("2c1c643f-82bd-4394-af5e-7f101b4ba7d9"),
                             Caption = "Thumb Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9500),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3208),
                             FileSize = 0L,
                             IsDefault = false,
-                            ProductId = new Guid("18495028-3944-4d00-b2af-9292a6b2dcaa"),
+                            ProductId = new Guid("7bf93173-9db6-46dc-bee8-47dc6ab9f30c"),
                             SortOrder = 1,
                             Status = 1,
                             Url = "/images/banhrong_01.jpg"
                         },
                         new
                         {
-                            Id = new Guid("6d4e78c4-4da5-4133-9b9a-f29b79062ac1"),
+                            Id = new Guid("086542b7-ed2e-4bf9-b9ab-d3b55a27d122"),
                             Caption = "Main Image",
-                            CreatedOn = new DateTime(2023, 9, 11, 7, 2, 47, 849, DateTimeKind.Utc).AddTicks(9504),
+                            CreatedOn = new DateTime(2023, 9, 13, 9, 18, 5, 758, DateTimeKind.Utc).AddTicks(3211),
                             FileSize = 0L,
                             IsDefault = true,
-                            ProductId = new Guid("18495028-3944-4d00-b2af-9292a6b2dcaa"),
+                            ProductId = new Guid("7bf93173-9db6-46dc-bee8-47dc6ab9f30c"),
                             SortOrder = 2,
                             Status = 1,
                             Url = "/images/banhrong_02.jpg"
@@ -1236,6 +1330,14 @@ namespace Infrastructure.Data.Migrations
                     b.ToTable("slides", (string)null);
                 });
 
+            modelBuilder.Entity("Core.Entities.OrderItem", b =>
+                {
+                    b.HasOne("Core.Entities.Order", null)
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Core.Entities.Product", b =>
                 {
                     b.HasOne("Core.Entities.Category", "Category")
@@ -1261,6 +1363,11 @@ namespace Infrastructure.Data.Migrations
                         .HasForeignKey("ProductId");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("Core.Entities.Order", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("Core.Entities.Product", b =>

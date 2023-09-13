@@ -34,6 +34,21 @@ public class ProductService : IProductService
         return lstResults;
     }
 
+    
+    public async Task<List<ProductResponseDto>> ListProductByCategoryUrl(string url)
+    {
+         var category = (await _uow.Repository<Category>().GetEntityWithSpec(x => x.UrlCode == url && x.Status == Status.Active, null)).FirstOrDefault();
+         var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.CategoryId == category.Id && x.Status == Status.Active, null, "Category,ProductImages")).ToList();
+        if (products == null)
+        {
+            return null;
+        }
+
+        var mapping = MapListHelpers.MapListObjectToString(products.ToList());
+        var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.Sku).ToList();
+        return lstResults;
+    }
+
     public async Task<PagedResult<ProductResponseDto>> ListProducts(PagingWithTimeRequestDTO request)
     {
 
@@ -135,6 +150,12 @@ public class ProductService : IProductService
         var mapping = MapListHelpers.MapObjectToString<ProductResponseDto>(dbResult);
         return mapping;
     }
+    public async Task<ProductResponseDto> GetBySku(string sku)
+    {
+        var dbResult = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.Sku == sku && x.Status == Status.Active, null, "Category,ProductImages")).FirstOrDefault();
+        var mapping = MapListHelpers.MapObjectToString<ProductResponseDto>(dbResult);
+        return mapping;
+    }
     public async Task<ProductResponseDto> UpdateSingle(ProductRequestDto request)
     {
         var dbResult = await _uow.Repository<Product>().GetByIdAsync(request.Id);
@@ -232,6 +253,7 @@ public class ProductService : IProductService
         var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.Sku).ToList();
         return lstResults;
     }
+
 }
 
 

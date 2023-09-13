@@ -2,6 +2,7 @@ using API.Extensions;
 using Core.DTO.RequestDto;
 using Core.Interfaces;
 using Core.Model;
+using Infrastructure.HelperService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
@@ -31,6 +32,14 @@ public class ProductController : BaseApiController
             return BadRequest($"Cannot find product {id}");
         return Ok(results);
     }
+    [HttpGet("{sku}")]
+    public async Task<IActionResult> GetBySku(string sku)
+    {
+        var results = await _productService.GetBySku(sku);
+        if (results == null)
+            return BadRequest($"Cannot find by sku");
+        return Ok(results);
+    }
     [HttpGet("category/{categoryId}")]
     public async Task<IActionResult> GetProductByCategoryId(Guid categoryId)
     {
@@ -39,6 +48,7 @@ public class ProductController : BaseApiController
             return BadRequest($"Cannot find product by category {categoryId}");
         return Ok(results);
     }
+
     [HttpGet("featureds")]
     public async Task<IActionResult> ListFeatureds()
     {
