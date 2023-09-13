@@ -47,10 +47,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapGet("/", () => {
-    app.Logger.LogInformation("Information - Hello Friends");
-	app.Logger.LogWarning("Warning - Hello Friends");
-	app.Logger.LogError("Error - Hello Friends");
-	app.Logger.LogCritical("Critical - Hello Friends");
 	return "Hello Friends!";
 });
 
