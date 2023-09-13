@@ -46,17 +46,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// using var scope = app.Services.CreateScope();
-// var services = scope.ServiceProvider;
-// var context = services.GetRequiredService<TestdbContext>();
-// var logger = services.GetRequiredService<ILogger<Program>>();
-// try
-// {
-//     // await context.Database.MigrateAsync();
-// }
-// catch (Exception ex)
-// {
-//     logger.LogError(ex, "An error occured during migration");
-// }
+app.MapGet("/", () => {
+    app.Logger.LogInformation("Information - Hello Friends");
+	app.Logger.LogWarning("Warning - Hello Friends");
+	app.Logger.LogError("Error - Hello Friends");
+	app.Logger.LogCritical("Critical - Hello Friends");
+	return "Hello Friends!";
+});
 
 app.Run();
