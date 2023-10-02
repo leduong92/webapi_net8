@@ -19,7 +19,6 @@ public class ProductService : IProductService
         _uow = uow;
         _storageService = storageService;
     }
-
     public async Task<List<ProductResponseDto>> ListProductByCategory(Guid categoryId)
     {
         var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.CategoryId == categoryId && x.Status == Status.Active, null, "Category,ProductImages")).ToList();
@@ -33,8 +32,6 @@ public class ProductService : IProductService
         var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.Sku).ToList();
         return lstResults;
     }
-
-    
     public async Task<List<ProductResponseDto>> ListProductByCategoryUrl(string url)
     {
          var category = (await _uow.Repository<Category>().GetEntityWithSpec(x => x.UrlCode == url && x.Status == Status.Active, null)).FirstOrDefault();
@@ -48,16 +45,26 @@ public class ProductService : IProductService
         var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.Sku).ToList();
         return lstResults;
     }
-
     public async Task<PagedResult<ProductResponseDto>> ListProducts(PagingWithTimeRequestDTO request)
     {
-
-        string searchKey = !string.IsNullOrEmpty(request.SearchKey) ? request.SearchKey.ToUpper() : string.Empty;
+        string searchKey = !string.IsNullOrEmpty(request.Q) ? request.Q.ToLower() : string.Empty;
         var paging = new PagedResult<Product>();
-        paging = await _uow.Repository<Product>().GetWithPaging(request.PageIndex, request.PageSize, x => x.Status == Status.Active, null, "Category,ProductImages");
+        //paging = await _uow.Repository<Product>().GetWithPaging(request.PageIndex, request.PageSize, x => x.Status == Status.Active, null, "Category,ProductImages");
+        
+        paging = await _uow.Repository<Product>().GetWithPaging(request.PageIndex, request.PageSize
+                , x => x.Status == Status.Active
+                    && (request.Category == null || x.Category.UrlCode.Contains(request.Category))
+                    && (request.Q == null || x.DisplayName.ToLower().StartsWith(searchKey) || x.UrlCode.ToLower().StartsWith(searchKey) || x.Sku.ToLower().StartsWith(searchKey) )
+                , request.SortKey == "NEWEST" ? x => x.OrderByDescending(x => x.IsNew) 
+                    : request.SortKey == "BEST_SELLING"? x => x.OrderByDescending(x => x.IsBestSeller) 
+                    : request.SortKey == "CREATED_AT"? x => x.OrderByDescending(x => x.IsFeatured) 
+                    : request.SortKey == "PRICE" && request.Reverse == false ? x => x.OrderBy(x => x.Price) 
+                    : request.SortKey == "PRICE" && request.Reverse == true ? x => x.OrderByDescending(x => x.Price) 
+                    : null
+                , "Category,ProductImages");
 
         var mapping = MapListHelpers.MapListObjectToString(paging.Results.ToList());
-        var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.DisplayName).ToList();
+        var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).ToList();
         var result = new PagedResult<ProductResponseDto>
         {
             PageIndex = paging.PageIndex,
@@ -136,14 +143,12 @@ public class ProductService : IProductService
 
         return rsp;
     }
-
     public async Task<int> DeleteSingle(ProductRequestDto request)
     {
         var dbResult = await _uow.Repository<Product>().GetByIdAsync(request.Id);
         _uow.Repository<Product>().Delete(dbResult);
         return await _uow.Complete();
     }
-
     public async Task<ProductResponseDto> GetByID(Guid id)
     {
         var dbResult = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.Id == id && x.Status == Status.Active, null, "Category,ProductImages")).FirstOrDefault();
@@ -233,7 +238,6 @@ public class ProductService : IProductService
         await _storageService.SaveFileAsync(file.OpenReadStream(), fileName);
         return "/" + SystemConstants.IMAGE_CONTENT_FOLDER_NAME + "/" + fileName;
     }
-
     public async Task<List<ProductResponseDto>> ListFeatureds()
     {
         var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.IsFeatured == true && x.Status == Status.Active, null, "Category,ProductImages")).ToList();
@@ -243,7 +247,6 @@ public class ProductService : IProductService
         var lstResults = JsonConvert.DeserializeObject<List<ProductResponseDto>>(mapping).OrderBy(x => x.Sku).ToList();
         return lstResults;
     }
-
     public async Task<List<ProductResponseDto>> ListNewProducts()
     {
         var products = (await _uow.Repository<Product>().GetEntityWithSpec(x => x.IsNew == true && x.Status == Status.Active, null, "Category,ProductImages")).ToList();

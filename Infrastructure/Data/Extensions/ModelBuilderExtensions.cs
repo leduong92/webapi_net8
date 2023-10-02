@@ -70,7 +70,7 @@ namespace Infrastructure.Data.Extensions
                      SeoAlias = "granola",
                      MetaTitle = "Granola",
                      MetaKeyword = "Granola",
-                     MetaDescription = "Granola",
+                     MetaDescription = "Granola là món ăn quen thuộc của người Mỹ vào buổi sáng, đây là hỗn hợp của nhiều thực phẩm lành lạnh với hàm lượng chất dinh dưỡng cao, nhất là giàu protein.",
                      Status = Status.Active,
                  },
                  new Category()
