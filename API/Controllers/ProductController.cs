@@ -17,8 +17,15 @@ public class ProductController : BaseApiController
         _productService = productService;
     }
 
+    [HttpPost("search")]
+    public async Task<IActionResult> ListPaging([FromBody] PagingWithTimeRequestDTO request)
+    {
+        var results = await _productService.ListProducts(request);
+
+        return Ok(results);
+    }
     [HttpGet]
-    public async Task<IActionResult> ListPaging([FromQuery] PagingWithTimeRequestDTO request)
+    public async Task<IActionResult> ListsPaging([FromQuery] PagingWithTimeRequestDTO request)
     {
         var results = await _productService.ListProducts(request);
 
